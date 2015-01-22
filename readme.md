@@ -32,3 +32,5 @@ $ nuget push MY_PROJECT.nupkg -Source https://YOUR_WEBSITE_NAME.azurewebsites.ne
 ## License
 
 MIT
+
+[![Build Status](https://travis-ci.org/richorama/PrivateNugetToGo.svg)](https://travis-ci.org/richorama/PrivateNugetToGo)
