@@ -4,7 +4,9 @@ Get your own NuGet feed on Azure Websites with the click of a button.
 
 [![Deploy to Azure](http://azuredeploy.net/deploybutton.png)](https://azuredeploy.net/)
 
-Once deployed, if you go the azure portal and set `nuget_username` and `nuget_password` settings, basic authorization will be enabled.
+Once deployed, if you go the azure portal and set `nuget_username` and `nuget_password` settings, basic authorization will be enabled. i.e.
+
+![settings screenshot](settings.png)
 
 You can also set `requireApiKey` to `true`, and provide an API Key with the `apiKey` setting.
 
