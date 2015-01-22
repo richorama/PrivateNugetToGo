@@ -63,7 +63,7 @@ namespace Devbridge.BasicAuthentication
 
         public void AuthenticateUser(Object source, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(ConfigurationManager.AppSettings["username"])) return;
+            if (string.IsNullOrWhiteSpace(ConfigurationManager.AppSettings["nuget_username"])) return;
 
             var context = ((HttpApplication)source).Context;
 
@@ -95,7 +95,7 @@ namespace Devbridge.BasicAuthentication
         public void IssueAuthenticationChallenge(Object source, EventArgs e)
         {
             // username is not defined, so don't issue a challenge
-            if (string.IsNullOrWhiteSpace(ConfigurationManager.AppSettings["username"])) return;
+            if (string.IsNullOrWhiteSpace(ConfigurationManager.AppSettings["nuget_username"])) return;
 
             var context = ((HttpApplication)source).Context;
 
@@ -115,7 +115,7 @@ namespace Devbridge.BasicAuthentication
 
         protected virtual bool ValidateCredentials(string userName, string password)
         {
-            return (userName == ConfigurationManager.AppSettings["username"] && password == ConfigurationManager.AppSettings["password"]);
+            return (userName == ConfigurationManager.AppSettings["nuget_username"] && password == ConfigurationManager.AppSettings["nuget_password"]);
         }
 
         protected virtual bool ExtractBasicCredentials(string authorizationHeader, ref string username, ref string password)
